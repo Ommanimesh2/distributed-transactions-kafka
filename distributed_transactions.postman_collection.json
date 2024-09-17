@@ -1,0 +1,40 @@
+{
+	"info": {
+		"_postman_id": "0a39c4b8-1bd2-4b18-9315-fec60000d198",
+		"name": "distributed_transactions",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "32313690"
+	},
+	"item": [
+		{
+			"name": "createOrder",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productId\":3,\r\n    \"userId\":1,\r\n    \"amount\":1200,\r\n    \"quantity\":41\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8081/order/create"
+			},
+			"response": []
+		},
+		{
+			"name": "getAllOrders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8081/order/all"
+			},
+			"response": []
+		}
+	]
+}

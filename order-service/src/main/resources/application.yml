@@ -1,0 +1,25 @@
+spring:
+  cloud:
+    function:
+      definition: orderSupplier;paymentEventConsumer
+    stream:
+      bindings:
+        orderSupplier-out-0:
+          destination: order-event
+        paymentEventConsumer-in-0:
+          destination: payment-event
+  application:
+    name: order-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/order_service
+    username: root
+    password: CH#1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+
+server:
+  port: 8081
