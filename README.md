@@ -31,8 +31,8 @@ The system consists of the following components:
 1. **Clone the repository**:
 
    ```bash
-   git clone <repository-url>
-   cd <repository-name>
+   git clone https://github.com/Ommanimesh2/distributed-transactions-kafka.git
+   cd distributed-transactions-kafka
    ```
 
 2. **Build the project**:
